@@ -520,7 +520,7 @@ func waitUntilVMIsReady(ctx context.Context, d *schema.ResourceData, vm *vbox.Ma
 			[]string{"no"},
 			key,
 			meta,
-			30*time.Second,
+			60*time.Second,
 			1*time.Second,
 		); err != nil {
 			return fmt.Errorf("waiting for VM (%s) to become ready: %w", d.Get("name"), err)
